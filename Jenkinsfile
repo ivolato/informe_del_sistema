@@ -13,6 +13,7 @@ pipeline {
             steps{
                 echo "Ejecutar el informe de sistema"
                 bash "./informe_del_sistema.sh" 
+                }
             }
         }
     }
