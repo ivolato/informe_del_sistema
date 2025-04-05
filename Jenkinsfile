@@ -3,17 +3,17 @@
 
 pipeline { 
     agent any
-    stages{
-        stage('agregar permisos'){
-            steps{
+    stages {
+        stage('agregar permisos') {
+            steps {
                 echo "Agregar los permisos de ejecucion"
-                bash "chmod +x ./informe_del_sistema.sh"
+                sh 'chmod +x ./informe_del_sistema.sh'
+            }
         }
-        stage('etapa1'){
-            steps{
+        stage('etapa1') {
+            steps {
                 echo "Ejecutar el informe de sistema"
-                bash "./informe_del_sistema.sh" 
-                }
+                sh './informe_del_sistema.sh'
             }
         }
     }
